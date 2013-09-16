@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ActiveRecord: Better Query Objects"
+title:  "ActiveRecord: Enhanced Query Objects"
 date:   2013-09-15
 tags: activerecord rails
 comments: true
