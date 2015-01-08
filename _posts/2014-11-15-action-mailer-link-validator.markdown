@@ -25,13 +25,13 @@ exception when the provided url is relative, we can prevent the mailer from bein
 ActionMailer::Base.helper do
   def url_for(options = nil)
     url = super(options)
-    return url if absoulte_url?(url) || fragment?(url)
+    return url if absolute_url?(url) || fragment?(url)
     fail 'Can not provide relative urls in mailers'
   end
 
   private
 
-  def absoulte_url?(url)
+  def absolute_url?(url)
     URI.parse(url).is_a? URI::HTTP
   rescue
     false
